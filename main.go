@@ -86,7 +86,7 @@ func DeleteProductHandler(c *gin.Context) {
 
 func InitHandler(c *gin.Context) {
 	var products = []Product{
-		{ID: "P001", Name: "Product Abc", Price: 100000},
+		{ID: "P001", Name: "Product A", Price: 100000},
 		{ID: "P002", Name: "Product B", Price: 200000},
 		{ID: "P003", Name: "Product C", Price: 300000},
 	}
