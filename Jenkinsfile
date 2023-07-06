@@ -3,7 +3,7 @@ pipeline {
     environment {
         GIT_URL = 'git@github.com:tikayesi/try-jenkins.git'
         BRANCH = 'with-docker'
-        CHANNEL = '#training'
+        // CHANNEL = '#training'
         IMAGE = 'my-golang-test'
         CONTAINER = 'my-golang-test-app'
         DOCKER_APP = 'docker'
@@ -42,7 +42,7 @@ pipeline {
         }
         success {
             echo 'This will run only if successful'
-            slackSend(channel: '#training', message: "Build deployed successfully - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)")
+            // slackSend(channel: '#training', message: "Build deployed successfully - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)")
         }
         failure {
             echo 'This will run only if failed'
