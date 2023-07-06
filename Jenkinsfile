@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         GIT_URL = 'git@github.com:tikayesi/try-jenkins.git'
-        BRANCH = 'with-docker'
+        BRANCH = 'tes-pipeline'
         // CHANNEL = '#training'
         IMAGE = 'my-golang-test'
         CONTAINER = 'my-golang-test-app'
