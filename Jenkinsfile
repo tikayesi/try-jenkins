@@ -6,7 +6,7 @@ pipeline {
         CHANNEL = '#training'
         IMAGE = 'my-golang-test'
         CONTAINER = 'my-golang-test-app'
-        DOCKER_APP = '/usr/local/bin/docker'
+        DOCKER_APP = 'docker'
         DB_HOST = 'product-db'
         DB_USER = 'postgres'
         DB_NAME = 'postgres'
