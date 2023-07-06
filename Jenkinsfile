@@ -1,9 +1,8 @@
 pipeline {
     agent any
     environment {
-        GIT_URL = 'git@github.com:tikayesi/try-jenkins.git'
+        GIT_URL = 'https://github.com/tikayesi/try-jenkins.git'
         BRANCH = 'tes-pipeline'
-        // CHANNEL = '#training'
         IMAGE = 'my-golang-test'
         CONTAINER = 'my-golang-test-app'
         DOCKER_APP = 'docker'
@@ -12,7 +11,7 @@ pipeline {
         DB_NAME = 'postgres'
         DB_PASSWORD = 'P@ssw0rd'
         DB_PORT = '5434'
-        API_PORT = '8181'
+        API_PORT = '8182'
     }
     stages {
         stage("Cleaning up") {
@@ -42,7 +41,6 @@ pipeline {
         }
         success {
             echo 'This will run only if successful'
-            // slackSend(channel: '#training', message: "Build deployed successfully - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)")
         }
         failure {
             echo 'This will run only if failed'
